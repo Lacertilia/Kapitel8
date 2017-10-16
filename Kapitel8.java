@@ -17,6 +17,19 @@ public class Kapitel8{
 		}else if(yb == false){
 			JOptionPane.showMessageDialog(null, "Inte skottar!");
 		}*/
+		String ns = JOptionPane.showInputDialog(null, "Vilket heltal vill du fakultera?");
+		int n = Integer.parseInt(ns);
+		long fn = nfak(n);
+		JOptionPane.showMessageDialog(null, "Fakulteten blir " + fn);
+
+	}
+	public static long nfak(int n){
+		long a;
+		for(a = 1; n>0; n--){
+			a = (int) a * n;
+			
+		}
+		return a;
 	}
 }
 /*
