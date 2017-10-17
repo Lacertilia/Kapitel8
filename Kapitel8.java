@@ -17,20 +17,33 @@ public class Kapitel8{
 		}else if(yb == false){
 			JOptionPane.showMessageDialog(null, "Inte skottar!");
 		}*/
-		String ns = JOptionPane.showInputDialog(null, "Vilket heltal vill du fakultera?");
+		/*String ns = JOptionPane.showInputDialog(null, "Vilket heltal vill du fakultera?");
 		int n = Integer.parseInt(ns);
 		long fn = nfak(n);
-		JOptionPane.showMessageDialog(null, "Fakulteten blir " + fn);
+		JOptionPane.showMessageDialog(null, "Fakulteten blir " + fn);*/
+
+		String tal = JOptionPane.showInputDialog(null, "Vilket tal?");
+		int s = Integer.parseInt(tal);
+		s = antalS(s);
+		JOptionPane.showMessageDialog(null, "Talet har " + s + " siffror.");
 
 	}
-	public static long nfak(int n){
+	public static int antalS(int s){
+		int varv = 0;
+		while(s>0){
+			s = s/10;
+			varv = varv + 1;
+		}
+		return varv;
+	}
+	/*public static long nfak(int n){
 		long a;
 		for(a = 1; n>0; n--){
 			a = (int) a * n;
 			
 		}
 		return a;
-	}
+	}*/
 }
 /*
 class Cirkel{
