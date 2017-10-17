@@ -22,20 +22,26 @@ public class Kapitel8{
 		long fn = nfak(n);
 		JOptionPane.showMessageDialog(null, "Fakulteten blir " + fn);*/
 
-		String tal = JOptionPane.showInputDialog(null, "Vilket tal?");
+		/*String tal = JOptionPane.showInputDialog(null, "Vilket tal?");
 		int s = Integer.parseInt(tal);
 		s = antalS(s);
-		JOptionPane.showMessageDialog(null, "Talet har " + s + " siffror.");
+		JOptionPane.showMessageDialog(null, "Talet har " + s + " siffror.");*/
+		visaInfo();
+
 
 	}
-	public static int antalS(int s){
+	public static void visaInfo(){
+		String info = System.getProperty("user.name").toString() + " " + System.getProperty("os.name").toString();
+		JOptionPane.showMessageDialog(null, info);
+	}
+	/*public static int antalS(int s){
 		int varv = 0;
 		while(s>0){
 			s = s/10;
 			varv = varv + 1;
 		}
 		return varv;
-	}
+	}*/
 	/*public static long nfak(int n){
 		long a;
 		for(a = 1; n>0; n--){
