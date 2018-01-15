@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class Kapitel8{
 	public static void main(String[] args){
@@ -26,14 +27,31 @@ public class Kapitel8{
 		int s = Integer.parseInt(tal);
 		s = antalS(s);
 		JOptionPane.showMessageDialog(null, "Talet har " + s + " siffror.");*/
-		visaInfo();
+		/*visaInfo();*/
+
+		varning();
 
 
 	}
-	public static void visaInfo(){
+	public static void varning(){
+		plinga(3);
+		System.out.println("Varning!");
+	}
+	public static void plinga(int a){
+		while(a>0){
+			Toolkit.getDefaultToolkit().beep();
+			try{
+				Thread.sleep(500);
+			}
+			catch (InterruptedException e){}
+			a--;
+		}
+
+	}
+	/*public static void visaInfo(){
 		String info = System.getProperty("user.name").toString() + " " + System.getProperty("os.name").toString();
 		JOptionPane.showMessageDialog(null, info);
-	}
+	}*/
 	/*public static int antalS(int s){
 		int varv = 0;
 		while(s>0){
